@@ -1,0 +1,155 @@
+/* General styles */
+*, *::after, *::before {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+:root {
+
+    --paleBlue: hsl(225, 100%, 94%);
+    --brightBlue: hsl(245, 75%, 52%);
+    --veryPaleBlue: hsl(225, 100%, 98%);
+    --desaturatedBlue: hsl(224, 23%, 55%);
+    --darkBlue: hsl(223, 47%, 23%);
+    --white: hsl(0, 100%, 100%);
+}
+
+body {
+    display: grid;
+    place-items: center;
+    min-height: 100vh;
+    margin: 0 auto;
+    width: auto;
+    font: 16px 'Red Hat Display', sans-serif;
+    background-color: var(--paleBlue);
+    background-image: url('/images/pattern-background-mobile.svg');
+    background-repeat: no-repeat;
+    background-position: top;
+    background-size: contain;
+}
+
+.img-wrapper {
+    display: block;
+    padding: 0;
+    margin: 0;
+    max-width: 100%;
+    border-radius: 12px 12px 0 0;
+}
+
+
+/* Components */
+.card {
+    max-width: 325px;
+}
+
+.inner-card {
+    background: var(--white);
+    text-align: center;
+    padding: 1.5rem;
+    border-radius: 0 0 12px 12px;
+}
+
+.title {
+    font-weight: 900;
+    font-size: 1.5em;
+    color: var(--darkBlue);
+    margin-bottom: 1.25rem;
+    margin-top: 1rem;
+}
+
+.desc {
+    color: var(--desaturatedBlue);
+    margin-bottom: 2rem;
+    line-height: 1.75;
+}
+
+.plan {
+    background: var(--veryPaleBlue);
+    border-radius: 8px;
+    padding: 1rem;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 1.5rem;
+}
+
+ul li {
+    list-style-type: none;
+    color: var(--desaturatedBlue);
+    line-height: 1.5;
+}
+
+li:first-child {
+    color: var(--darkBlue);
+    font-weight: 900;
+}
+/* Links & Buttons */
+a {
+    font-weight: 700;
+    font-size: 14px;
+    color: var(--brightBlue);
+}
+
+.btn {
+    display: block;
+    width: 100%;
+    border: none;
+    text-align: center;
+    font-family: 'Red Hat Display', sans-serif;
+    font-size: 16px;
+    font-weight: 700;
+}
+
+.btn-proceed {
+    background: var(--brightBlue);
+    color: var(--veryPaleBlue);
+    border-radius: 10px;
+    box-shadow: 1px 15px 10px var(--paleBlue);
+    margin-bottom: 1.5rem;
+    padding: 1rem;
+}
+.btn-cancel {
+    background: var(--white);
+    color: var(--desaturatedBlue);
+
+}
+
+.btn:hover, a:hover {
+    cursor: pointer;
+}
+
+.btn-proceed:hover{
+    background: hsl(245, 100%, 70%);
+}
+
+.btn-cancel:hover {
+    color: var(--darkBlue);
+    font-weight: 700;
+}
+
+a:hover {
+    color: hsl(245, 100%, 70%);
+    font-weight: 700;
+}
+
+
+/* ------------------------/// For Larger screens --------------------------- */
+
+@media  screen and (min-width: 480px) and (max-width: 1440px){
+    body {
+        display: grid;
+        place-items: center;
+        min-height: 100vh;
+        margin: 0 auto;
+        width: auto;
+        background-color: var(--paleBlue);
+        background-image: url('/images/pattern-background-desktop.svg');
+        background-repeat: no-repeat;
+        background-position: top;
+        background-size: contain;
+    }
+    .card {
+        max-width: 450px;
+    }
+}
